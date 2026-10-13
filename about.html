@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sophia | Software Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#090909",
+            lime: "#d8f27a",
+            muted: "#a4a4a4"
+          },
+          fontFamily: {
+            display: ["Arial Narrow", "Impact", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #090909; }
+    .outline-pill { border: 1px solid #343434; border-radius: 9999px; padding: .65rem 1.1rem; text-align: center; }
+    .field { width: 100%; background: #1a1a1a; border: 1px solid #292929; border-radius: 4px; padding: .85rem 1rem; color: white; outline: none; }
+    .field:focus { border-color: #d8f27a; }
+  </style>
+</head>
+<body class="bg-ink text-white antialiased">
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-ink/90 backdrop-blur">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-10">
+      <a href="#home" class="font-display text-lg font-bold tracking-wide">SOPHIA.</a>
+      <button id="menuButton" class="rounded border border-white/20 px-3 py-2 text-sm md:hidden" aria-expanded="false" aria-controls="mobileMenu">MENU ☰</button>
+      <div class="hidden items-center gap-8 text-sm text-gray-300 md:flex">
+        <a class="hover:text-lime" href="#projects">Work</a>
+        <a class="hover:text-lime" href="#about">About</a>
+        <a class="hover:text-lime" href="#contact">Contact</a>
+      </div>
+    </nav>
+    <div id="mobileMenu" class="hidden border-t border-white/10 px-5 py-4 md:hidden">
+      <div class="flex flex-col gap-4 text-sm text-gray-300">
+        <a href="#projects">Work</a><a href="#about">About</a><a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home" class="mx-auto max-w-7xl px-5 pt-32 md:px-10">
+    <section class="grid gap-8 py-10 md:grid-cols-[.8fr_1.2fr] md:gap-14 md:py-16">
+      <div><p class="mb-4 text-xs uppercase tracking-[.35em] text-lime">Aspiring Software Engineer</p>
+        <h1 class="font-display text-5xl font-black uppercase leading-[.95] sm:text-6xl md:text-7xl">Building<br />things for<br />the web.</h1>
+      </div>
+      <div class="max-w-2xl self-end">
+        <p class="text-xl leading-relaxed text-gray-100 sm:text-2xl">I’m Sophia, a beginner developer learning to turn ideas into useful, thoughtful digital experiences.</p>
+        <p class="mt-5 leading-7 text-gray-400">I’m currently building my skills in front-end development and exploring the wider world of software engineering. I enjoy learning by making projects, solving problems, and improving one line of code at a time.</p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="#projects" class="rounded-full bg-lime px-6 py-3 text-sm font-bold text-black transition hover:bg-white">VIEW MY WORK ↗</a>
+          <a href="#contact" class="rounded-full border border-white/25 px-6 py-3 text-sm font-semibold hover:border-lime hover:text-lime">CONTACT ME</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="border-t border-white/15 py-16 md:py-20">
+      <div class="grid gap-8 md:grid-cols-[.8fr_1.2fr] md:gap-14">
+        <h2 class="font-display text-4xl font-black uppercase sm:text-5xl">About me</h2>
+        <div>
+          <p class="text-xl leading-relaxed sm:text-2xl">A curious learner with a growing interest in software engineering and web development.</p>
+          <p class="mt-4 leading-7 text-gray-400">I’m developing my foundations in HTML, CSS, JavaScript and Tailwind CSS. I like practical projects that challenge me to think through both how a website looks and how it works.</p>
+        </div>
+      </div>
+      <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-xl border border-white/10 bg-white/[.03] p-5"><span class="text-sm text-lime">01 / LEARN</span><h3 class="mt-3 text-lg font-semibold">Keep improving</h3><p class="mt-2 text-sm leading-6 text-gray-400">Building strong fundamentals and learning by doing.</p></div>
+        <div class="rounded-xl border border-white/10 bg-white/[.03] p-5"><span class="text-sm text-lime">02 / BUILD</span><h3 class="mt-3 text-lg font-semibold">Make real projects</h3><p class="mt-2 text-sm leading-6 text-gray-400">Turning practice into projects people can actually use.</p></div>
+        <div class="rounded-xl border border-white/10 bg-white/[.03] p-5"><span class="text-sm text-lime">03 / SOLVE</span><h3 class="mt-3 text-lg font-semibold">Think through problems</h3><p class="mt-2 text-sm leading-6 text-gray-400">Breaking confusing tasks into smaller, manageable steps.</p></div>
+        <div class="rounded-xl border border-white/10 bg-white/[.03] p-5"><span class="text-sm text-lime">04 / GROW</span><h3 class="mt-3 text-lg font-semibold">Stay curious</h3><p class="mt-2 text-sm leading-6 text-gray-400">Exploring new tools without pretending to know everything.</p></div>
+      </div>
+    </section>
+
+    <section class="border-t border-white/15 py-16 md:py-20">
+      <div class="grid gap-8 md:grid-cols-[.8fr_1.2fr] md:gap-14">
+        <h2 class="font-display text-4xl font-black uppercase sm:text-5xl">My skills</h2>
+        <div>
+          <p class="mb-6 max-w-xl text-gray-400">The tools I’m learning and using in my projects. Still growing, still shipping.</p>
+          <div class="flex flex-wrap gap-3">
+            <span class="outline-pill">HTML</span><span class="outline-pill">CSS</span><span class="outline-pill">JavaScript</span><span class="outline-pill">Tailwind CSS</span><span class="outline-pill">Responsive Design</span><span class="outline-pill">Git & GitHub</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="border-t border-white/15 py-16 md:py-20">
+      <div class="mb-10 grid gap-4 md:grid-cols-[.8fr_1.2fr] md:gap-14">
+        <h2 class="font-display text-4xl font-black uppercase sm:text-5xl">Selected work</h2>
+        <p class="max-w-xl leading-7 text-gray-400">A few projects and experiments from my learning journey. Add your live links and repositories below as you publish them.</p>
+      </div>
+      <div class="grid gap-5 md:grid-cols-2">
+        <article class="rounded-2xl border border-white/10 p-6 transition hover:border-lime/60 sm:p-8">
+          <div class="mb-8 flex items-center justify-between"><span class="text-sm text-lime">PROJECT 01</span><span class="text-xs text-gray-500">WEB DEVELOPMENT</span></div>
+          <h3 class="text-2xl font-semibold">Shipping & Logistics Website</h3>
+          <p class="mt-3 leading-7 text-gray-400">A logistics website concept with shipping information, tracking UI and service sections, built while practising responsive layouts.</p>
+          <p class="mt-5 text-sm text-gray-500">HTML · Tailwind CSS · JavaScript</p>
+          <a href="https://shipping-project-beta.vercel.app/" target="_blank" rel="noreferrer" class="mt-6 inline-block text-sm font-semibold text-lime hover:text-white">VIEW LIVE PROJECT ↗</a>
+        </article>
+        <article class="rounded-2xl border border-white/10 p-6 transition hover:border-lime/60 sm:p-8">
+          <div class="mb-8 flex items-center justify-between"><span class="text-sm text-lime">PROJECT 02</span><span class="text-xs text-gray-500">PRACTICE PROJECT</span></div>
+          <h3 class="text-2xl font-semibold">JavaScript Experiments</h3>
+          <p class="mt-3 leading-7 text-gray-400">Small exercises for strengthening programming logic, working with arrays, and making pages interactive.</p>
+          <p class="mt-5 text-sm text-gray-500">JavaScript · TypeScript · Problem solving</p>
+          <a href="https://github.com/sophiainterlude/shipping-project" target="_blank" rel="noreferrer" class="mt-6 inline-block text-sm font-semibold text-lime hover:text-white">VIEW GITHUB ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="border-t border-white/15 py-16 md:py-20">
+      <div class="grid gap-10 md:grid-cols-2 md:gap-16">
+        <div>
+          <h2 class="font-display text-4xl font-black uppercase sm:text-5xl">Let’s connect</h2>
+          <p class="mt-5 max-w-sm leading-7 text-gray-400">Interested in collaborating, sharing ideas, or talking about tech? Find me here.</p>
+          <a href="https://github.com/sophiainterlude" target="_blank" rel="noreferrer" class="mt-6 inline-block text-lime hover:text-white">GitHub ↗</a>
+          <p class="mt-16 text-xs text-gray-600">© <span id="year"></span> Sophia. Built while learning.</p>
+        </div>
+        <form id="contactForm" class="space-y-5">
+          <div><label for="name" class="mb-2 block text-sm text-gray-400">Name</label><input class="field" id="name" name="name" required /></div>
+          <div><label for="email" class="mb-2 block text-sm text-gray-400">Email</label><input class="field" id="email" name="email" type="email" required /></div>
+          <div><label for="message" class="mb-2 block text-sm text-gray-400">Message</label><textarea class="field min-h-36 resize-y" id="message" name="message" required></textarea></div>
+          <button type="submit" class="rounded-full bg-lime px-7 py-3 text-sm font-bold text-black hover:bg-white">OPEN EMAIL APP ↗</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuButton.addEventListener("click", () => {
+      const isOpen = !mobileMenu.classList.contains("hidden");
+      mobileMenu.classList.toggle("hidden");
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      menuButton.textContent = isOpen ? "MENU ☰" : "CLOSE ✕";
+    });
+    mobileMenu.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.textContent = "MENU ☰";
+    }));
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("contactForm").addEventListener("submit", event => {
+      event.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const subject = encodeURIComponent("Portfolio message from " + name);
+      const body = encodeURIComponent("From: " + name + " (" + email + ")\n\n" + message);
+      window.location.href = "mailto:?subject=" + subject + "&body=" + body;
+    });
+  </script>
+</body>
+</html>
